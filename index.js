@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mysql = require("mysql2");
 const { faker } = require("@faker-js/faker");
 const express = require("express");
@@ -13,10 +15,10 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 const connection = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  database: "test",
-  password: "vikrantt123",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME
 });
 
 let getRandomUser = () => {
