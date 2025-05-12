@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>All Users</title>
+  </head>
+  <body>
+    <h1>All Users</h1>
+    <a href="/users/new" class="new">Add New User</a>
+    <a href="/users/refresh" class="new2">Refresh</a>
+    <table>
+      <tr>
+        <th>id</th>
+        <th>username</th>
+        <th>email</th>
+      </tr>
+      <% for(let user of users){%>
+      <tr>
+        <td><%=user.id%></td>
+        <td><%=user.username%></td>
+        <td><%=user.email%></td>
+        <form action="/users/<%=user.id%>?_method=DELETE" method="post">
+          <td class="edit"><a href="/users/<%=user.id%>/edit">EDIT</a></td>
+          <td><button class="edit">DELETE</button></td>
+        </form>
+      </tr>
+      <%}%>
+    </table>
+  </body>
+</html>

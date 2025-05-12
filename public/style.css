@@ -1,0 +1,64 @@
+body {
+  background-color: black;
+  color: white;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+table {
+  width: 90vw;
+  text-align: center;
+}
+
+a {
+  color: antiquewhite;
+}
+
+input {
+  background-color: grey;
+}
+
+input::placeholder {
+  color: black;
+}
+
+input:focus {
+  outline: none;
+}
+
+.edit a, button{
+  height: 35px;
+  color: white;
+  text-decoration: none;
+  background-color: maroon;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+button {
+  height: 20px;
+}
+
+.new, .new2 {
+  position: absolute;
+  right: 10vw;
+  top: 8vh;
+  color: black;
+  text-decoration: none;
+  background-color: white;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+}
+
+.new2 {
+  right: 25vw;
+}
+
+.new:hover, .new2:hover {
+  background-color: navy;
+  color: white;
+}
+
